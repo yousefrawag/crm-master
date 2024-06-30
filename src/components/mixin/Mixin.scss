@@ -1,0 +1,37 @@
+@import "../variables/Variables.scss";
+
+@mixin icon_style {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: $border-radius;
+    font-size: $font-18;
+    transition: $transition;
+    background-color: $blue-6;
+    color: $black-1;
+}
+
+@mixin Btn_style {
+    &:hover {
+        background-color: $blue-6;
+            color: $black-1 ;
+        svg {
+            color: $black-1;
+        }
+    }
+    padding: 6px 20px;
+    border: 1px solid $blue-6;
+    border-radius: $border-radius;
+    font-size: $font-14;
+    transition: $transition;
+    color: $blue-6;
+    font-size: $font-14;
+    svg {
+        transition: $transition;
+        color: $blue-6;
+        margin-left: 5px;
+        margin-bottom: 3px;
+    }
+}

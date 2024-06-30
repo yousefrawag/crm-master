@@ -1,0 +1,175 @@
+@import "../variables/Variables.scss";
+
+.add-employees {
+    .add-employees-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .add-new {
+            a {
+                &:hover {
+                    background-color: $blue-6;
+                        color: $black-1 ;
+                    svg {
+                        color: $black-1;
+                    }
+                }
+                padding: 5px 20px;
+                border: 1px solid $blue-6;
+                border-radius: $border-radius;
+                font-size: $font-14;
+                transition: $transition;
+                color: $blue-6;
+                font-size: $font-14;
+                svg {
+                    transition: $transition;
+                    color: $blue-6;
+                    margin-left: 5px;
+                    margin-bottom: 3px;
+                }
+            }
+        }
+    }
+
+    .add-employees-data {
+        margin: $margin-top;
+        background-color: $black-1;
+        border-radius: $border-radius;
+        padding: $padding-15;
+        box-shadow: $shadow-2;
+        .add-text {
+            font-size: $font-16;
+            font-weight: 600;
+            margin: 10px 0 30px;
+        }
+        form {
+            .add-employees-image {
+                width: 85px;
+                height: 85px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $black-4;
+                border-radius: 50%;
+                position: relative;
+                .image-person {
+                    width: 50%;
+                }
+                .newPic {
+                    width: 85px;
+                    height: 85px;
+                    overflow: hidden;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .image-person {
+                        width: 80px;
+                        height: 80px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+                }
+                .add-svg {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    background-color: $blue-1;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    cursor: pointer;
+
+                    svg {
+                        color: $blue-6;
+                        position: absolute;
+                        top: 25%;
+                        left: 25%;
+                    }
+                    input {
+                        cursor: pointer;
+                        width: 100%;
+                        opacity: 0;
+                    }
+                }
+            }
+            .main-inputs {
+                padding-top: 40px;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                .chi-in {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    div {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: start;
+                        label {
+                            margin-bottom: 5px;
+                            font-size: $font-14;
+                            font-weight: 600;
+                            color: $black-8;
+                        }
+                        input, 
+                        select {
+                            height: 40px;
+                            background-color: $black-1;
+                            width: 300px;
+                            outline: none;
+                            padding: 0 20px;
+                            border-radius: $border-radius;
+                            border: 1px solid $black-5;
+                                font-size: $font-14;
+                        }
+                    }
+                }
+            }
+        }
+        .btn-down {
+            display: flex;
+            width: 100%;
+            padding: 20px 0;
+            align-items: center;
+            justify-content: end;
+            gap: 15px;
+            a,
+            button
+            {
+                &:hover {
+                    background-color: $blue-6;
+                        color: $black-1 ;
+                    svg {
+                        color: $black-1;
+                    }
+                }
+                padding: 6px 25px;
+                border: 1px solid $blue-6;
+                border-radius: $border-radius;
+                font-size: $font-14;
+                transition: $transition;
+                color: $blue-6;
+                font-size: $font-14;
+                background-color: $blue-6;
+                color: $black-1;
+                svg {
+                    transition: $transition;
+                    color: $blue-6;
+                    margin-left: 5px;
+                    margin-bottom: 3px;
+                }
+            }
+            .cancel {
+                border: none;
+                color: $black-8;
+                background: none;
+            }
+            .save {
+                &:hover {
+                    background-color: $blue-4;
+                    border: 1px solid $blue-4;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+@import "../variables/Variables.scss";
+
+.breadcrumb-single {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: $black-7;
+    font-size: $font-14;
+    .active {
+        color: $black-13;
+    }
+}

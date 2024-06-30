@@ -1,0 +1,15 @@
+@import "../variables/Variables.scss";
+@import "../mixin/Mixin.scss";
+
+.breadcrumb-pages {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    .icon {
+        @include icon_style
+    }
+    .title{
+        font-weight: 600;
+        font-size: $font-16;
+    }
+}

@@ -1,0 +1,168 @@
+@import "../../../components/variables/Variables.scss";
+@import "../../../components/mixin/Mixin.scss";
+.mission_section_wrapper {
+    .mission_top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .add-new {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          button {
+            @include Btn_style;
+          }
+          .modal {
+            z-index: 99999999999;
+          }
+            .modal-dialog {
+              pointer-events: inherit;
+              z-index: 99999999999;
+              button {
+                color: $black-8;
+                border: transparent;
+                background-color: $black-5;
+                padding: 6px 16px;
+                font-size: $font-14;
+                font-weight: 600;
+                border-radius: $border-radius;
+                border: 1px solid $black-5;
+                transition: $transition;
+                &:hover {
+                  background-color: $blue-6;
+                  color: white;
+                  border: 1px solid $blue-6;
+                }
+              }
+              .modal-content {
+                padding: 10px;
+                .demo_txt {
+                  p {
+                    font-size: 12px ;
+                    max-width: 80%;
+                    padding: 10px 0;
+                  }
+                }
+                .modal-dialog-scrollable {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 10px;
+                  font-size: $font-14;
+                  label {
+                    margin-top: 10px;
+                    font-weight: 600;
+                    color: $black-13;
+                  }
+                  textarea {
+                    font-size: $font-14;
+                    outline: none;
+                    border-color: $black-5;
+                    border-radius: $border-radius;
+                    height: 80px;
+                    padding: 10px;
+                  }
+                  .form_control {
+                    width: 100%;
+                    margin: 10px 0 20px;
+                    outline: none;
+                    border-color: $black-5;
+                    border-radius: $border-radius;
+                    padding: 2px 6px;
+                }
+                .checks_boxs {
+                  display: flex;
+                  flex-wrap: wrap;
+                  align-items: center;
+                  gap: 10px;
+                  padding-top: 8px;
+                  font-size: $font-14;
+                  div {
+                    display: flex;
+                    gap: 4px;
+                    input {
+                      transform: translateY(5px);
+                    }
+                  }
+                }
+                }
+              }
+            }
+          input {
+            padding: 5px 3px;
+            border-radius: $border-radius;
+            border: 1px solid #bebebe;
+          }
+        }
+      }
+      .mission_box {
+        margin: $margin-top;
+        background-color: $black-1;
+        border-radius: $border-radius;
+        box-shadow: $shadow-2;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+        overflow: hidden;
+        padding: 25px;
+        .box_content {
+            padding: 15px;
+            box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.199);
+            background-color: #ffffff;
+            p {
+                font-size: $font-14;
+                margin: 0;
+            }
+            .top_mang {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                p {
+                    color: $blue-10;
+                    font-weight: 700;
+                    font-size: 11px;
+                }
+                svg {
+                    cursor: pointer;
+                    color: $black-8;
+                }
+            }
+            .client_content {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 20px 0 15px;
+                .img_name {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    p {
+                        font-weight: 600;
+                    }
+                    img {
+                        width: 45px;
+                        height: 45px;
+                        object-fit: cover;
+                        
+                    }
+                    span {
+                        font-size: $font-12;
+                        color: $black-8;
+                    }
+                }
+                .phone {
+                    p {
+                        color: $blue-6;
+                    }
+                }
+            }
+            .end_pro {
+                display: flex;
+                align-items: center;
+                justify-content: end;
+                p {
+                    color: $black-8;
+                }
+            }
+        }
+      }
+}

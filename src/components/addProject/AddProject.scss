@@ -1,0 +1,307 @@
+@import "../variables/Variables.scss";
+@import "../mixin/Mixin.scss";
+.add_project_section {
+
+    .title_top {
+        padding: 15px 0 20px;
+        p {
+            color: $black-13;
+            font-weight: 600;
+            font-size: $font-18;
+        }
+    }
+    .main_project_content {
+        display: flex;
+        justify-content: space-between;
+        .right_box {
+            width: 20%;
+            background-color: white;
+            box-shadow: $shadow-2;
+            padding: 20px;
+            padding-top: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            gap: 30px;
+            border-radius: $border-radius;
+            .Project_completion_stage {
+                display: flex;
+                gap: 10px;
+                .icon {
+                    @include icon_style;
+                    position: relative;
+                    &::after {
+                        content: "";
+                        height: 100%;
+                        border: 1px dotted $black-5;
+                        position: absolute;
+                        top: 100%;
+                        left: 50%;
+                    }
+                }
+                .text {
+                    p {
+                        &:first-child {
+                            font-weight: 600;
+                            font-size: $font-14;
+                        }
+                        &:last-child {
+                            color: $black-7;
+                            font-size: $font-12;
+                        }
+                    }
+                }
+                &:last-child {
+                    .icon {
+                        &::after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        .left_details_box {
+            border-radius: $border-radius;
+            width: 78%;
+            box-shadow: $shadow-2;
+            background-color: white;
+            .l_d_b_t {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                .icon {
+                    @include icon_style;
+                }
+                padding: 20px;
+                box-shadow: $shadow-3;
+                p {
+                    font-size: $font-18;
+                    font-weight: 600;
+                }
+
+            }
+            .project_box {
+                height: 600px;
+                width: 100%;
+                overflow-y: scroll;
+                padding: 20px;
+                .property_type {
+                    padding-top: 20px;
+                    .main_group {
+                        display: flex;
+                        flex-direction: column;
+                        width: 515px;
+                        label {
+                            font-size: $font-16;
+                            font-weight: 600;
+                            color: $black-13;
+                        }
+                        .form_control {
+                            width: 100%;
+                            margin: 10px 0 20px;
+                            outline: none;
+                            border-color: $black-5;
+                            border-radius: $border-radius;
+                            padding: 2px 6px;
+                        }
+                    }
+                }
+                .property_location {
+                    width: 100%;
+                    p {
+                        margin: 40px 0 30px;
+                        font-size: $font-16;
+                        font-weight: 600;
+                        color: $black-13;
+                    }
+                    .real_inputs {
+                        display: grid;
+                        width: 100%;
+                        grid-template-columns: repeat(2, 0fr);
+                        grid-gap: 10px;
+                        .main_group {
+                            display: flex;
+                            flex-direction: column;
+                            width: 250px;
+                            label {
+                                font-size: $font-14;
+                                font-weight: 600;
+                                color: $black-8;
+                            }
+                            .form_control {
+                                width: 100%;
+                                margin: 10px 0 20px;
+                                outline: none;
+                                border-color: $black-5;
+                                border-radius: $border-radius;
+                                padding: 2px 6px;
+                            }
+                        }
+                    }
+                }
+                .project_address {
+                    padding-top: 20px;
+                    label {
+                        font-size: $font-14;
+                        font-weight: 600;
+                        color: $black-8;
+                    }
+                    input {
+                        width: 515px;
+                        margin: 15px 0 20px;
+                        outline: none;
+                        display: block;
+                        border: 1px solid $black-5;
+                        border-radius: $border-radius;
+                        padding: 7px 10px;
+                        font-size: 14px;
+                    }
+                }
+                .client_dir {
+                    padding-top: 20px;
+                    .main_group {
+                        display: flex;
+                        flex-direction: column;
+                        width: 515px;
+                        label {
+                            font-size: $font-16;
+                            font-weight: 600;
+                            color: $black-13;
+                        }
+                        .form_control {
+                            width: 100%;
+                            margin: 10px 0 20px;
+                            outline: none;
+                            border-color: $black-5;
+                            border-radius: $border-radius;
+                            padding: 2px 6px;
+                        }
+                    }
+                }
+                .finishing_c {
+                    padding-top: 20px;
+                    p {
+                        font-weight: 600;
+                        color: $black-13;
+                    }
+                    div {
+                        display: flex;
+                        gap: 10px;
+                        button {
+                            @include Btn_style;
+                            color: $black-6;
+                            border-color: $black-6;
+                            background-color: transparent;
+                            &:hover {
+                                border-color: $blue-6;
+                            }
+                        }
+                        .active {
+                            background-color: $blue-6;
+                            color: white;
+                            border-color: $blue-6;
+                        }
+                    }
+                }
+                .project_price {
+                    padding-top: 20px;
+                    label {
+                        font-size: $font-16;
+                        font-weight: 600;
+                        color: $black-13;
+                    }
+                    input {
+                        width: 250px;
+                        margin: 15px 0 20px;
+                        outline: none;
+                        display: block;
+                        border: 1px solid $black-5;
+                        border-radius: $border-radius;
+                        padding: 7px 10px;
+                        font-size: 14px;
+                    }
+                }
+                .add_files {
+                    padding-top: 30px;
+                    width: 100%;
+                    .dropdown {
+                        width: 30%;
+                        .btn-secondary {
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            background-color: transparent;
+                            color: $blue-6;
+                            border-color: $black-5;
+                            font-size: 16px;
+                            svg {
+                                background-color: $blue-1;
+                                padding: 6px;
+                                font-size: 30px;
+                                margin-left: 5px;
+                                border-radius: $border-radius;
+                            }
+                        }
+                    }
+                    .dropdown-toggle {
+                        &::after {
+                            color: $black-8;
+                        }
+                    }
+                    .dropdown-menu {
+                        width: 100%;
+                        border: none;
+                        box-shadow: $shadow-2;
+                        .input-file{
+                            display: none;
+                        }
+                        .dropdown-item {
+                            text-align: start;
+                            padding: 0.5rem;
+                            font-size: $font-14;
+                            img {
+                                width: 16px;
+                                margin-left: 6px;
+                            }
+                        }
+                    }
+                }
+            }
+            .add_return {
+                padding: 20px;
+                box-shadow: $shadow-2;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                div {
+                    a {
+                        display: inline-block;
+                        @include Btn_style;
+                        padding: 6px 25px;
+                    }
+                }
+                .return_btn {
+                    a {
+                        background-color: $black-3;
+                        color: $black-8 ;
+                        border-color: transparent;
+                    }
+                }
+                .add_btn {
+                    button {
+                        @include Btn_style;
+                        background-color: $blue-6;
+                        color: $black-1 ;
+                        border-color: transparent;
+                        &:hover {
+                            background-color: transparent;
+                            border: 1px solid $blue-6;
+                            color: $blue-6;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

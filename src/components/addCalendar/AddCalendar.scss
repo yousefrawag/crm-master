@@ -1,0 +1,12 @@
+@import "../variables/Variables.scss";
+@import "../mixin/Mixin.scss";
+
+.calendar_section_details {
+    .calendar_box {
+        margin-top: 30px;
+        padding: 30px;
+        background-color: $black_1;
+        box-shadow: $shadow_2;
+        border-radius: $border_radius;
+    }
+}

@@ -1,0 +1,77 @@
+@import "../../../components/variables/Variables.scss";
+@import "../../../components/mixin/Mixin.scss";
+.main_powers_wrapper {
+    .powers_top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .add-new {
+            a {
+                @include Btn_style;
+            }
+        }
+    }
+    .powers_box {
+        margin: $margin-top;
+        background-color: $black-1;
+        border-radius: $border-radius;
+        padding: $padding-15;
+        box-shadow: $shadow-2;
+        .box-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            .title {
+                p {
+                    margin: 0;
+                    font-size: $font-16;
+                    font-weight: 600;
+                }
+            }
+            .search-date {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                .search {
+                    display:flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: $black-6;
+                    height: 40px;
+                    background-color: $black-1;
+                    width: 100%;
+                    padding: 0 20px;
+                    border-radius: 50px;
+                    border: 1px solid $black-5;
+                    display:flex;
+                    align-items: center;
+                    cursor: pointer;
+                    input {
+                        margin-left: 15px;
+                        height:38px;
+                        width:100%;
+                        border:none;
+                        outline: none;
+                        font-size: $font-14;
+                    }
+                }
+                .date {
+                    form {
+                        input {
+                            color: $black-7;
+                            height: 40px;
+                            background-color: $black-1;
+                            width: 100%;
+                            padding: 0 20px;
+                            border-radius: 50px;
+                            border: 1px solid $black-5;
+                            width:100%;
+                            font-size: $font-14;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
