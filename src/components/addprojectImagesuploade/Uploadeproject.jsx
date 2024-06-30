@@ -42,6 +42,7 @@ const handelplay = async (imagenam) => {
             <div className="text-lenght-image d-flex gap-2 mb-4">
             <span>
                     <MdAttachFile />
+                    jj
              </span>
                 <p>الصور والفديوهات ({images.length})</p>
               
